@@ -39,7 +39,7 @@ def buildYOMP(env, pipelineConfig, logger):
       {
         "buildWorkspace": "/path/to/build/in",
         "YOMPRemote": "YOMP@YOMPhub.com:Numenta/numenta-apps.YOMP",
-        "YOMPBranch": "master",
+        "YOMPBranch": "main",
         "YOMPSha": "HEAD",
         "pipelineParams": "{dict of parameters}",
         "pipelineJson": "/path/to/json/file"

@@ -68,7 +68,7 @@ def preBuildSetup(env, pipelineConfig):
       {
         "buildWorkspace": "/path/to/build/in",
         "YOMPRemote": "YOMP@YOMPhub.com:Numenta/numenta-apps.YOMP",
-        "YOMPBranch": "master",
+        "YOMPBranch": "main",
         "YOMPSha": "HEAD",
         "pipelineParams": "{dict of parameters}",
         "pipelineJson": "/path/to/json/file"
@@ -105,7 +105,7 @@ def addAndParseArgs(jsonArgs):
       {
         "buildWorkspace": "/path/to/build/in",
         "YOMPRemote": "YOMP@YOMPhub.com:Numenta/numenta-apps.YOMP",
-        "YOMPBranch": "master",
+        "YOMPBranch": "main",
         "YOMPSha": "HEAD",
         "pipelineParams": "{dict of parameters}",
         "pipelineJson": "/path/to/json/file"
@@ -159,7 +159,7 @@ def addAndParseArgs(jsonArgs):
   pipelineConfig = {
     "buildWorkspace": None,
     "YOMPRemote": "YOMP@YOMPhub.com:Numenta/numenta-apps.YOMP",
-    "YOMPBranch": "master",
+    "YOMPBranch": "main",
     "YOMPSha": "HEAD",
     "pipelineParams": pipelineParams,
     "pipelineJson": None

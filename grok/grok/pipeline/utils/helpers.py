@@ -34,7 +34,7 @@ def checkIfSaneProductionParams(YOMPRemote, YOMPBranch):
     :rtype: bool
   """
   if (YOMPRemote == "YOMP@YOMPhub.com:Numenta/numenta-apps.YOMP" and
-      YOMPBranch == "master"):
+      YOMPBranch == "main"):
     return True
   else:
     return False

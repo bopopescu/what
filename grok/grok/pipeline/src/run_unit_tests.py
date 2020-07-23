@@ -129,11 +129,11 @@ def recordXunitTestsResults():
   """
     This updates result generated for tests which does report formatted test
     result.
-    Results are updated to a directory name masterResults where jenkins can find
+    Results are updated to a directory name mainResults where jenkins can find
     it. Results are archived by jenkins for each build.
   """
   jobResultsDir = os.path.join(os.environ["BUILD_WORKSPACE"], "products")
-  masterResults = prepareResultsDir()
+  mainResults = prepareResultsDir()
   jobNumber = getBuildNumber()
 
   def attemptResultUpdate(task):
@@ -141,7 +141,7 @@ def recordXunitTestsResults():
     newResultsFile = "%s_unit_test_results_%s.xml" % (task, jobNumber)
     if os.path.exists(os.path.join(jobResultsDir, originalResultsFile)):
       shutil.move(os.path.join(jobResultsDir, originalResultsFile),
-                  os.path.join(masterResults, newResultsFile))
+                  os.path.join(mainResults, newResultsFile))
 
   attemptResultUpdate("YOMP")
   attemptResultUpdate("htmengine")

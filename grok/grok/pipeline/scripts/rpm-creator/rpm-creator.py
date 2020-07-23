@@ -240,7 +240,7 @@ def prepFakerootFromGit(fakeroot,
         YOMP.checkout(sha)
         YOMP.resetHard()
     else:
-      g_logger.info("No sha specified, using head of master")
+      g_logger.info("No sha specified, using head of main")
     YOMPVersionData = loadGitDescribeFromDirectory(workDirectory)
     sourceFiles = os.listdir("%s/%s/%s" % (fakeroot,
                                            installDirectory,

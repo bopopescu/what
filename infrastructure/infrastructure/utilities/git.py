@@ -307,7 +307,7 @@ def fetch(repository, refspec):
 
   @param repository: Name of YOMP repository (e.g origin)
 
-  @param refspec: Name of the refspec (e.g. master)
+  @param refspec: Name of the refspec (e.g. main)
 
   @raises
     infrastructure.utilities.exceptions.CommandFailedError: if
@@ -427,7 +427,7 @@ def getShaFromRemoteBranch(YOMPRemoteRepo, YOMPRemoteBranch):
 
   @param YOMPRemoteRepo: The URL of the remote repo,
     e.g., YOMP@YOMPhub.com:numenta/nupic.YOMP
-  @param YOMPRemoteBranch: The name of the remote branch, e.g., master
+  @param YOMPRemoteBranch: The name of the remote branch, e.g., main
 
   @raises:
 
@@ -435,7 +435,7 @@ def getShaFromRemoteBranch(YOMPRemoteRepo, YOMPRemoteBranch):
   @rtype: String
   """
   shaList = executeCommand("YOMP ls-remote %s" % YOMPRemoteRepo)
-  if YOMPRemoteBranch == "master":
+  if YOMPRemoteBranch == "main":
     return shaList.split("\t")[0]
   else:
     formattedBranchName = "refs/heads/%s" % YOMPRemoteBranch

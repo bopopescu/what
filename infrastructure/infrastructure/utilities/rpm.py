@@ -174,7 +174,7 @@ def YOMPCloneIntoFakeroot(fakeroot,
   debugging information.
 
   @returns the SHA of the resulting YOMP clone. We may not have been invoked
-  with a specific SHA (we normally build tip of master, for example), but we
+  with a specific SHA (we normally build tip of main, for example), but we
   always want to include the exact SHA packaged in our RPM descriptions.
   """
   if logger:
@@ -195,6 +195,6 @@ def YOMPCloneIntoFakeroot(fakeroot,
         logger.debug("Checking out SHA %s in %s", sha, workDirectory)
         YOMP.checkout(sha)
       else:
-        logger.debug("No SHA specified, using head of master")
+        logger.debug("No SHA specified, using head of main")
       return YOMP.getCurrentSha()
 
